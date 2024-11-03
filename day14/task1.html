@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+// task1-reverse Pattern:
+    num=5
+    let count=num*num
+    for(i=0;i<num;i++){
+        s=" "
+    for(j=1;j<=num;j++){
+        if(count<10){
+            s=s+"0"+count+"  "
+            count--
+        }else{
+            s=s+count+"  "
+            count--     
+        }
+    }
+    console.log(s);
+   }
+    
+// task2:
+    num=5
+    for(i=1;i<=num;i++){
+        s=" "
+    for(j=1;j<=num;j++){
+        if(i==j){
+            s=s+"*"+"  "  
+        }else{
+            s=s+j+"  "    
+        }
+    }
+    console.log(s);
+}
+
+// task3:
+    function printPattern() {
+    let num = 1;
+    const rows = 5;
+
+    for (let i = 1; i <= rows; i++) {
+        let rowOutput = "";
+        for (let j = 0; j < i; j++) {
+            rowOutput += num.toString().padStart(2, '0') + " ";
+            num++;
+        }
+        console.log(rowOutput.trim());  
+    }
+  }
+   printPattern();
+
+
+
+    </script>
+</body>
+</html>

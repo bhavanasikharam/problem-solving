@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+//  task1:
+    num=5
+    for(i=1;i<=num;i++){
+        s=""
+        code=97
+        for(sp=0;sp<num-i;sp++){
+            s=s+" "
+        }
+        for(j=1;j<=i;j++){
+            s=s+String.fromCharCode(code)+"  "
+            code++
+        }
+        console.log(s);
+    }
+
+// task2:
+     num=5
+     for(i=num;i>=1;i--){
+        s=" "
+        for(j=i;j>=1;j--){
+            s=s+j+" "
+        }
+        console.log(s);
+     }
+
+//  task3:
+vowels = "aeiou"
+for(i=0;i<vowels.length;i++){
+    s=" "
+
+for(sp=0;sp<=vowels.length-i;sp++){
+    s=s+" "
+}
+for(j=0;j<=i;j++){
+    s=s+vowels[j]+" "
+}
+console.log(s);
+}
+
+    </script>
+</body>
+</html>

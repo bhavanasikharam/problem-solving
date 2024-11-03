@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// task1  given a string move all the uppercase characters to the front and lowercase character to last
+        str="JscrAViptA"
+        upper=""
+        lower=""
+        for(i of str){
+            if(i==i.toUpperCase()){
+                upper+=i
+            }else{
+                lower+=i
+            }
+        }
+        console.log(upper+lower);
+
+ //Task2:write the logic to implement the trim end method
+    let str2="   hello world  "
+    trim_end=""
+    count=0
+    for(i of str2){
+        if(i==""&&count==0){
+        }
+            else{
+                trim_end+=i
+                count++
+
+            }
+        }
+        console.log(trim_end);
+        
+   //   task-3
+   let str1 = "SIKHARAMbhavana"
+        result = "";
+        for ( j of str1) {
+            if (j === j.toUpperCase()) {
+            result += j.toLowerCase();  
+        } else {
+        result += j.toUpperCase();  
+        }
+    }
+    console.log(result);        
+
+    </script>
+</body>
+</html>
