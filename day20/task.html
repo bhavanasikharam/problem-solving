@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function generatePattern() {
+  const n = 5; // Number of rows in the pattern
+  const letters = "abcde"; // Sequence of letters
+  let pattern = "";
+
+  // Top part of the pattern
+  for (let i = 0; i < n; i++) {
+    let line = " ".repeat(i); // Add leading spaces
+    for (let j = 0; j < n - i; j++) {
+      if (j === 0 || j === n - i - 1) {
+        line += letters[j] + " "; // Add letters at edges
+      } else {
+        line += "  "; // Add spaces between letters
+      }
+    }
+    pattern += line.trimEnd() + "\n"; // Add the line to the pattern
+  }
+
+  // Bottom part of the pattern
+  for (let i = 1; i < n; i++) {
+    let line = " ".repeat(n - i - 1); // Add leading spaces
+    for (let j = 0; j <= i; j++) {
+      if (j === 0 || j === i) {
+        line += letters[n - 1 - j] + " "; // Add letters at edges
+      } else {
+        line += "  "; // Add spaces between letters
+      }
+    }
+    pattern += line.trimEnd() + "\n"; // Add the line to the pattern
+  }
+
+  console.log(pattern);
+}
+
+generatePattern();
+
+    </script>
+</body>
+</html>
